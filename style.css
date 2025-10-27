@@ -1,0 +1,181 @@
+:root {
+  --verde-bucks: #00471B;
+  --creme-bucks: #EEE1C6;
+  --azul-bucks: #0077C0;
+  --sombra: rgba(0, 0, 0, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: var(--creme-bucks);
+  color: #222;
+}
+
+/* ===== Cabeçalho ===== */
+header {
+  background-color: var(--verde-bucks);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px var(--sombra);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.ativo {
+  color: var(--azul-bucks);
+}
+
+/* ===== Seção Hero ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: linear-gradient(90deg, var(--verde-bucks), var(--azul-bucks));
+  color: white;
+  padding: 3em 2em;
+}
+
+.hero img {
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--sombra);
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.btn {
+  background-color: var(--creme-bucks);
+  color: var(--verde-bucks);
+  padding: 0.7em 1.5em;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--azul-bucks);
+  color: white;
+}
+
+/* ===== Galeria ===== */
+.galeria {
+  text-align: center;
+  padding: 2em;
+}
+
+.grid-imagens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+}
+
+.grid-imagens img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.grid-imagens img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Cards de Projetos ===== */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: center;
+  padding: 2em;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px var(--sombra);
+  padding: 1em;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+/* ===== Formulário ===== */
+.form-card {
+  background: white;
+  max-width: 600px;
+  margin: auto;
+  padding: 2em;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px var(--sombra);
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 1.5em;
+}
+
+input, button {
+  width: 100%;
+  padding: 0.8em;
+  margin: 0.3em 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+button {
+  background-color: var(--verde-bucks);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: var(--azul-bucks);
+}
+
+/* ===== Rodapé ===== */
+footer {
+  background-color: var(--verde-bucks);
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: 3em;
+}
